@@ -130,7 +130,7 @@ select {
     -moz-box-shadow: 0px 0px 30px -3px rgba(0, 0, 0, 0.13);
 }
 
-.search-product input[type=submit]{
+.search-product input[type=submit] {
     border: 0;
     margin: auto 5px;
     background-color: var(--primary-color);
@@ -318,12 +318,9 @@ select {
 }
 
 .field-icon {
-    float: right;
-    margin-left: -25px;
-    margin-top: -32px;
-    position: relative;
-    z-index: 2;
-    padding-right: 10px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
     cursor: pointer;
 }
 
@@ -479,14 +476,19 @@ select {
 /* new added css over */
 .side-nav {
     background-color: var(--slider-white-color);
-    height: 100%;
+    height: calc(100% - 116px);
     position: fixed;
     z-index: 1;
-    left: 8%;
-    overflow-x: hidden;
-    padding-top: 20px;
-    width: 300px;
+    top: 116px;
+    overflow-y: scroll;
+    /* padding-top: 20px; */
+    width: 20%;
 }
+
+/* ul.collections {
+    max-height: 400px;
+    overflow-y: auto;
+} */
 
 .browse-page {
     margin-left: 335px;
@@ -678,9 +680,7 @@ select {
 
 .change-mail-modal .field-icon {
     padding-right: 10px;
-    position: absolute;
-    top: 315px;
-    right: 20px;
+    right: 0px;
     cursor: pointer;
 }
 
@@ -691,19 +691,7 @@ select {
 
 .change-password-modal .field-icon1,
 .change-password-modal .field-icon2 {
-    padding-right: 10px;
-    position: absolute;
     cursor: pointer;
-}
-
-.change-password-modal .field-icon1 {
-    top: 204px;
-    right: 20px;
-}
-
-.change-password-modal .field-icon2 {
-    top: 293px;
-    right: 20px;
 }
 
 .left .nav-pills {

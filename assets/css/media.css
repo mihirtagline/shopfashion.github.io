@@ -82,13 +82,11 @@
     .side-nav {
         background-color: var(--slider-white-color);
         height: 100%;
-        position: fixed;
+        position: sticky;
         z-index: 1;
-        /* top: 0; */
-        left: 10%;
+        top: 0;
         overflow-x: hidden;
         padding-top: 20px;
-        width: 230px;
     }
 }
 
@@ -187,6 +185,7 @@
         opacity: 1;
         left: 0;
         visibility: visible;
+        width: 45%;
     }
 
     .main-image img {
@@ -355,7 +354,7 @@
 
     .side-nav {
         top: 85px;
-        max-width: 40%;
+        /* max-width: 40%; */
     }
 
     .product-info h4 {
@@ -753,7 +752,7 @@
 
     .side-nav {
         top: 75px;
-        max-width: 40%;
+        width: 70%;
     }
 
     .campaign-content {

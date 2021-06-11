@@ -594,7 +594,8 @@
                     <div class="search-product">
                         <a class="nav-link search-link"><i class="fal fa-search"></i> Search</a>
                         <form action="search.html" id="search-box">
-                                 <input type="search" name="search" class="rounded-0 border-0 search-place" placeholder="search">
+                            <input type="search" name="search" class="rounded-0 border-0 search-place"
+                                placeholder="search">
                             <input type="submit" value="Go" class="d-lg-none">
                         </form>
                     </div>
@@ -606,8 +607,10 @@
                             Sign In<i class="fal fa-chevron-down ps-2"></i>
                         </a>
                         <ul class="dropdown-menu user-menu" aria-labelledby="user-dropdown">
-                            <li class="px-2 py-2"><a class="btn btn-dark signin-btn rounded-0" href="/signin.html" target="_self">Sign In</a></li>
-                            <li class="px-2 py-2"><a class="btn btn-outline-dark signin-btn rounded-0 signup-btn" href="/registration.html">Create Account</a></li>
+                            <li class="px-2 py-2"><a class="btn btn-dark signin-btn rounded-0" href="/signin.html"
+                                    target="_self">Sign In</a></li>
+                            <li class="px-2 py-2"><a class="btn btn-outline-dark signin-btn rounded-0 signup-btn"
+                                    href="/registration.html">Create Account</a></li>
                             <li><a class="dropdown-item" href="user.html" target="_self">Your Account</a></li>
                             <li><a class="dropdown-item" href="user.html">Wish List</a></li>
                         </ul>
@@ -618,7 +621,7 @@
     </header>
 
     <main>
-        
+
         <div class="registration-form">
             <div class="container">
                 <div class="row justify-content-center">
@@ -628,19 +631,26 @@
                         <p><i class="fal fa-truck pe-2"></i>Track orders easily</p>
                         <p><i class="far fa-cloud pe-2"></i>One account to shop our brands</p>
                         <p><span class="required">*</span>Required</p>
-                        <form action="index.html">
+                        <form id="second_form">
                             <label for="email" class="fw-bold">Email<span class="required">*</span></label> <br>
                             <input type="email" id="email" class="rounded-0">
-                            <label for="fname" class="mt-4 fw-bold">First Name<span class="required">*</span></label> <br> 
-                            <input type="text" id="fname" class="rounded-0" required aria-describedby="nameError">
-                            <label for="lname" class="mt-4 fw-bold">Last Name<span class="required">*</span></label> <br> 
-                            <input type="text" id="lname" class="rounded-0" required aria-describedby="nameError">
-                            <label for="password" class="mt-4 fw-bold">Create password<span class="required">*</span></label> <br> 
-                            <input type="password" id="password" class="rounded-0" required>
-                            <span toggle="#password" class="field-icon toggle-password">Show</span>
-                            <p class="warning mt-2">By creating an account, you agree to our <span><a href="#">Privacy Policy</a></span> and <span><a href="#">Terms & Conditions.</a></span></p>
-                            <button class="btn btn-dark rounded-0">Create Account</button>
-                            <p class="mt-2 mb-1">Already User? <a href="signin.html" class="text-decoration-underline">Sign In</a></p>
+                            <label for="fname" class="mt-4 fw-bold">First Name<span class="required">*</span></label>
+                            <br>
+                            <input type="text" id="fname" class="rounded-0" aria-describedby="nameError">
+                            <label for="lname" class="mt-4 fw-bold">Last Name<span class="required">*</span></label>
+                            <br>
+                            <input type="text" id="lname" class="rounded-0" aria-describedby="nameError">
+                            <label for="password" class="mt-4 fw-bold">Create password<span
+                                    class="required">*</span></label> <br>
+                            <div class="password position-relative">
+                                <input type="password" id="password" class="rounded-0">
+                                <span toggle="#password" class="field-icon toggle-password">Show</span>
+                            </div>
+                            <p class="warning mt-2">By creating an account, you agree to our <span><a href="#">Privacy
+                                        Policy</a></span> and <span><a href="#">Terms & Conditions.</a></span></p>
+                            <button class="btn btn-dark rounded-0" onsubmit="return validate()">Create Account</button>
+                            <p class="mt-2 mb-1">Already User? <a href="signin.html"
+                                    class="text-decoration-underline">Sign In</a></p>
                         </form>
                     </div>
                 </div>

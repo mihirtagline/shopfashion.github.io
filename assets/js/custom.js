@@ -45,6 +45,96 @@ $(".toggle-password").click(function () {
     }
 });
 
+$(document).ready(function () {
+
+    $('#first_form').submit(function (e) {
+        e.preventDefault();
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+        $(".error").remove();
+        if (email.length < 1) {
+            $('#email').after('<p class="error m-0">This field is required</p>');
+        }
+        if (password.length < 1) {
+            $('#password').after('<p class="error m-0">This field is required</p>');
+        }
+    });
+
+    $('#second_form').submit(function (e) {
+        e.preventDefault();
+        var fname = $('#fname').val();
+        var lname = $('#lname').val();
+        var email = $('#email').val();
+        var password = $('#password').val();
+
+        $(".error").remove();
+
+        if (fname.length < 1) {
+            $('#fname').after('<p class="error m-0">This field is required</p>');
+        }
+        if (lname.length < 1) {
+            $('#lname').after('<p class="error m-0">This field is required</p>');
+        }
+        if (email.length < 1) {
+            $('#email').after('<p class="error m-0">This field is required</p>');
+        }
+        if (password.length < 1) {
+            $('#password').after('<p class="error m-0">This field is required</p>');
+        }
+    });
+
+    $('#change-mail').submit(function (e) {
+        e.preventDefault();
+        var newEmail = $('#new-email').val();
+        var confirmEmail = $('#confirm-email').val();
+        var password = $('#password').val();
+
+        $(".error").remove();
+
+        if (newEmail.length < 1) {
+            $('#new-email').after('<p class="error m-0">This field is required</p>');
+        }
+        if (confirmEmail.length < 1) {
+            $('#confirm-email').after('<p class="error m-0">This field is required</p>');
+        }
+        if (password.length < 1) {
+            $('#password').after('<p class="error m-0">This field is required</p>');
+        }
+    });
+
+    $('#change-password').submit(function (e) {
+        e.preventDefault();
+        var current = $('#current-password').val();
+        var newPass = $('#new-password').val();
+
+        $(".error").remove();
+
+        if (current.length < 1) {
+            $('#current-password').after('<p class="error m-0">This field is required</p>');
+        }
+
+        if (newPass.length < 1) {
+            $('#new-password').after('<p class="error m-0">This field is required</p>');
+        }
+    });
+
+    $('#change-name').submit(function (e) {
+        e.preventDefault();
+        var fname = $('#first-name').val();
+        var lname = $('#last-name').val();
+
+        $(".error").remove();
+
+        if (fname.length < 1) {
+            $('#first-name').before('<p class="error m-0">This field is required</p>');
+        }
+        if (lname.length < 1) {
+            $('#last-name').after('<p class="error m-0">This field is required</p>');
+        }
+    });
+
+});
 
 $(document).ready(function () {
     $("input").blur(function () {
@@ -106,21 +196,6 @@ if ($(".grid").length > 0) {
         columnWidth: '.grid-sizer',
         percentPosition: true
     });
-}
-
-var mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
-    scrollFunction()
-};
-
-function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-    } else {
-        mybutton.style.display = "none";
-    }
 }
 
 // When the user clicks on the button, scroll to the top of the document
@@ -214,13 +289,10 @@ $('.filter').affix({
     }
 });
 
-function validate() {
-    var email = document.signin_form.email.value;
-    if (email == null || email== "") {
-        document.getElementById("error").innerHTML = "Enter Email";
-        return false;
-    } else {
-        document.getElementById("error").innerHTML = " ";
-        return false;
-    }
-}
+$(document).ready(function() {
+    $('#submit').click(function() {
+        if (!$('#name').val()) {
+            alert('Enter your name!');
+        }
+    })
+});

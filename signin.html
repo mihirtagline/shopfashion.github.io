@@ -628,15 +628,14 @@
                     <div class="col-md-4 signin-form">
                         <h3>Sign In</h3>
                         <p>Enter your email to get started.</p>
-                        <form action="index.html" name="signin_form">
+                        <form id="first_form" name="signin_form">
                             <label for="email" class="fw-bold">Email</label> <br>
                             <input type="email" id="email" name="email" class="rounded-0" >
-                            <span id="error"></span>
-                            <label for="password" class="mt-4 fw-bold">Password</label>
+                            <label for="password" class="fw-bold">Password</label>
                             <input type="password" id="password" class="rounded-0" name="pass" >
                             <p class="warning">By tapping Next, you agree to our <span><a href="#">Privacy
                                         Policy</a></span> and <span><a href="#">Terms & Conditions.</a></span></p>
-                            <button class="btn btn-dark rounded-0" onsubmit="return validate()">LogIn</button>
+                            <button class="btn btn-dark rounded-0">LogIn</button>
                             <p class="mt-2"><a href="forgot.html" class="text-decoration-underline">Forgot Password?</a>
                             </p>
                             <p class="mt-2 mb-1">Not an User? <a href="registration.html"
